@@ -69,9 +69,9 @@ app.use('/issues', require('./routes.issues'));
 
 // //GET index.html route
 app.use("/*", function(req, res) {
-	console.log('*** REDIRECT: url: ' + req.url)
-	console.log('*** REDIRECT: baseurl: ' + req.baseUrl)
-	console.log('*** REDIRECT: originalurl: ' + req.originalUrl)
+//	console.log('*** REDIRECT: url: ' + req.url)
+//	console.log('*** REDIRECT: baseurl: ' + req.baseUrl)
+//	console.log('*** REDIRECT: originalurl: ' + req.originalUrl)
   return res.render(path.join(__dirname, 'public/index.html'));
 });
 
