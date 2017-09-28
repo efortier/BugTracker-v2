@@ -113,6 +113,6 @@ app.directive('modalDialog',function(){
 app.constant("BTCONFIGS", {
     backendHost: "http://localhost:3000/",
     backendHost2: "",
-    isDev: true,
+    isDev: false,
     noLogging: false
 });
