@@ -61,6 +61,7 @@ app.use(parser.json());
 // some static paths.
 app.use("/bower_components", express.static(path.join(__dirname + "/bower_components")));
 app.use("/app", express.static(path.join(__dirname + "/app")));
+app.use("/public", express.static(path.join(__dirname + "/public")));
 
 // some routes.
 app.use('/users', require('./routes.users'));
