@@ -4,6 +4,7 @@
   "description": "Bug tracking using angular v1.4",
   "main": "server.js",
   "dependencies": {
+    "bower": "^1.8.2",
     "bcrypt": "^1.0.3",
     "body-parser": "^1.18.1",
     "cors": "^2.8.4",
@@ -14,6 +15,7 @@
     "mongoose": "~4.4.20"
   },
   "devDependencies": {
+    "bower": "^1.8.2",
     "jshint": "^2.9.5",
     "nodemon": "^1.12.1",
     "prettier": "^1.7.0",
