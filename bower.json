@@ -23,8 +23,7 @@
     "bootstrap": "^3.3.7",
     "jquery": "^3.2.1",
     "chance": "^1.0.11",
-    "angular-data-table": "^0.7.0",
-    "angular-paging": "^2.2.2"
+    "angular-data-table": "^0.7.0"
   },
   "resolutions": {
     "angular": "1.4.14",
