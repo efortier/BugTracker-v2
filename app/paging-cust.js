@@ -10,7 +10,7 @@
  * @element EA
  *
  */
-angular.module('bw.paging', []).directive('bwPaging', function () {
+angular.module('bw.paging', []).directive('bwpaging', function () {
 
 
     /**

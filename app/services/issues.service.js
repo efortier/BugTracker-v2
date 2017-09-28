@@ -8,7 +8,7 @@ mod.factory("IssuesService", function($http, BTCONFIGS, AuthService, $q, $locati
   };
 
   function prepEndpoint(ep) {
-    if (BTCONFIGS.isDev) return BTCONFIGS.backendHost + ep;
+    //if (BTCONFIGS.isDev) return BTCONFIGS.backendHost + ep;
     return ep;
   }
 

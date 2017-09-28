@@ -1,5 +1,5 @@
 
-var mod = angular.module("thisApp.Issues", ['bw.paging', 'data-table']);
+var mod = angular.module("thisApp.Issues", ['data-table', 'bw.paging']);
 var dataTable = angular.module('data-table');
 
 mod.controller("IssuesController", function($scope, AuthService, $location, GridDataService, IssuesService,
