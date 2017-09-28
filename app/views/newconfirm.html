@@ -1,0 +1,16 @@
+<div >
+    <div class="row">
+    <div class="jumbotron text-center well">
+      <h2>Rapport d'incident créé avec succès.</h2>
+      <h4>Souvenez-vous: un incident par rapport!</h4>
+    </div>
+  </div>
+  <div class="row text-center">
+      <h4>Que désirez-vous faire maintenant?</h4>
+        <div ng-if="isLoggedIn()" class="">
+            <button class="btn btn-primary" ng-click="createClick()"><span class="glyphicon glyphicon-pencil"></span> Créer un autre rapport</button>
+            <button class="btn btn-success" ng-click="viewClick()"><span class="glyphicon glyphicon-eye-open"></span> Voir votre rapport</button>
+            <button class="btn btn-default" ng-click="homeClick()"><span class="glyphicon glyphicon-arrow-left"></span> Retour à la page principale</button>
+        </div>
+  </div>
+</div>

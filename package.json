@@ -1,0 +1,28 @@
+{
+  "name": "bugtrackerv2",
+  "version": "1.0.0",
+  "description": "Bug tracking using angular v1.4",
+  "main": "server.js",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.1",
+    "cors": "^2.8.4",
+    "ejs": "^2.5.7",
+    "express": "~4.12.4",
+    "jsonwebtoken": "^8.0.1",
+    "mongodb": "^2.2.31",
+    "mongoose": "~4.4.20"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.5",
+    "nodemon": "^1.12.1",
+    "prettier": "^1.7.0",
+    "morgan": "^1.8.2"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eric Fortier",
+  "license": "ISC"
+}

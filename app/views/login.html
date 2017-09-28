@@ -1,0 +1,25 @@
+
+<div style="margin: 0 auto; width:400px;">
+  <h2 class="page-header">Ouverture de session</h2>
+  <form class='form-horizontal'>
+    <div class="form-group input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input type="text" ng-model="username" id="username" name="username" class="form-control" placeholder="Nom d'utilisateur" autofocus>
+    </div>
+    <div class="form-group input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+      <input type="password" ng-model="password" id="password" name="password" class="form-control" placeholder="Mot de passe">
+    </div>
+    <div class="form-group">
+      <section class="pull-left">
+          <button class="btn btn-default" ng-click="registerClick();"><span class="glyphicon glyphicon-plus"></span> Créer un compte</button>
+      </section>
+      <section class="pull-right">
+        <button class="btn btn-primary" ng-click="loginClick()"><span class="glyphicon glyphicon-ok"></span> Ouvrir</button>
+        <button class="btn btn-default" ng-click="cancelClick()"><span class="glyphicon glyphicon-arrow-left"></span> Annuler</button>
+      </section>
+    </div>
+  </form>
+</div>
+
+<modal-dialog></modal-dialog>

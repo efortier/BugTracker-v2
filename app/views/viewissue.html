@@ -1,0 +1,121 @@
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-sm-offset-1 col-sm-6">
+            <div class="form-group">
+                <label for="rep_title">Titre du rapport:</label>
+                <input type="text" class="form-control" id="rep_title" name="rep_title" ng-change="validateReport()" ng-model="btReport.issue_title">
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label for="Sel_Status">État:</label>
+                <select class="form-control" ng-change="validateReport()" ng-model="btReport.issue_status" name="Sel_Status" id="Sel_Status">
+                    <option ng-repeat="item in btStates" ng-value="item.name" ng-selected="item.name === btReport.issue_status">{{item.name}}</option>
+                </select>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-sm-offset-1 col-sm-3">
+            <div class="form-group">
+                <label for="Sel_Project">Projet:</label>
+                <select class="form-control" ng-change="validateReport()" ng-model="btReport.issue_project" name="Sel_Project" id="Sel_Project">
+                    <option ng-repeat="item in btProjects" ng-value="item.name" ng-selected="item.name === btReport.issue_project">{{item.name}}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label for="Sel_Assigned">Assigné à:</label>
+                <select class="form-control" ng-change="validateReport()" ng-model="btReport.issue_assignee" name="Assigned" id="Sel_Assigned">
+                    <option value="" selected disabled>Choisir utilisateur</option>
+                    <option value="" ng-selected="!btReport.issue_assignee || btReport.issue_assignee.len === 0">Personne</option>
+                    <option ng-repeat="item in btUsers" ng-value="item.name" ng-selected="item.name === btReport.issue_assignee">{{item.name}}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label for="Sel_Author">Rapporté par:</label>
+                <select class="form-control" ng-change="validateReport()" ng-model="btReport.issue_author" name="Author" id="Sel_Author">
+                    <option value="" selected disabled>Choisir utilisateur...</option>
+                    <option ng-repeat="item in btUsers" ng-value="item.name" ng-selected="item.name === btReport.issue_author">{{item.name}}</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-sm-offset-1 col-sm-3">
+            <div class="form-group">
+                <label for="Sel_Status">Type du problème:</label>
+                <select class="form-control" ng-change="validateReport()" ng-model="btReport.issue_type" name="Sel_Status" id="Sel_Status">
+                    <option ng-repeat="item in btTypes" ng-value="item.name" ng-selected="item.name === btReport.issue_type">{{item.name}}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label for="Sel_Severity">Gravité du problème:</label>
+                <select class="form-control" ng-change="validateReport()" ng-model="btReport.issue_severity" name="Sel_Severity" id="Sel_Severity">
+                    <option ng-repeat="item in btSeverity" ng-value="item.name" ng-selected="item.name === btReport.issue_severity">{{item.name}}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label for="rep_tags">Mots clés:</label>
+                <input type="text" class="form-control" id="rep_tags" name="rep_tags" ng-change="validateReport()" ng-model="btReport.issue_tags">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-sm-offset-1 col-sm-9">
+            <div class="form-group">
+                <label for="rep_desc">Description du problème: (inclure les étapes pour reproduire le problème, résultats actuels vs anticipés, etc)</label>
+                <textarea class="form-control" rows="8" id="rep_desc" ng-change="validateReport()" placeholder="Description"
+                    ng-model="btReport.issue_description"></textarea>
+            </div>
+        </div>
+
+        <div class="col-sm-offset-1 col-sm-9">
+            <div class="form-group">
+                <label for="rep_feedback">Commentaires: (Suggestions, discussions, etc.)</label>
+                <textarea class="form-control" rows="8" id="rep_feedback" ng-change="validateReport()" placeholder="Entrer vos commentaires"
+                ng-model="btReport.issue_feedback"></textarea>
+            </div>
+        </div>
+
+        <div class="col-sm-offset-1 col-sm-9">
+            <section class="pull-left">
+
+            <button class="btn btn-warning" ng-click="deleteClick()" confirm="Êtes-vous certain?" confirm-ok="Oui" confirm-cancel="Non" confirm-title="Supprimer ce rapport"><span class="glyphicon glyphicon-trash"></span> Supprimer ce rapport</button>
+
+            </section>
+            <section class="pull-right">
+
+
+            <button class="btn btn-primary" ng-disabled="!btReport.isValid" ng-click="updateClick()"><span class="glyphicon glyphicon-cloud-upload"></span> Sauvegarder les modifications</button>
+
+            <button class="btn btn-default" ng-click="cancelClick()"><span class="glyphicon glyphicon-arrow-left"></span> Annuler</button>
+
+
+            </section>
+        </div>
+    </div>
+
+</div>
+<modal-dialog></modal-dialog>

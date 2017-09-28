@@ -1,0 +1,49 @@
+<div class="form-group container nopadding">
+    <label><font size="2">Liste de problèmes</font></label>
+    <div class="row nopadding">
+        <div class="col-xs-12">
+        <dtable options="ngx_options" rows="ngx_rows" class="material dt" on-row-click="rowClicked(row)"></dtable>
+        </div>
+    </div>
+    <!-- Cannot use pagination, because every single grid or table for angular 1 is terrible. -->
+    <!-- <ul class="pagination">
+        <li ng-class="{'active':page.pageSize === 5}"><a ng-click="setPageSize(5)" href="#">5</a></li>
+        <li ng-class="{'active':page.pageSize === 10}"><a ng-click="setPageSize(10)" href="#">10</a></li>
+        <li ng-class="{'active':page.pageSize === 15}"><a ng-click="setPageSize(15)" href="#">15</a></li>
+        <li ng-class="{'active':page.pageSize === 20}"><a ng-click="setPageSize(20)" href="#">20</a></li>
+    </ul>  -->
+
+    <div class="row top-buffer20">
+        <div class="col-xs-9 pull-left">
+            <form class="form-inline">
+            <label><font size="2">Filtres</font></label><BR>
+            <input type='text' class="form-control input-sm" ng-model="page.titleFilter" placeholder='Titre' ng-change='refreshFilters()' name="titleFilter" />
+            <select class="form-control input-sm" ng-change="refreshFilters()" ng-model="page.projectFilter" name="Sel_Project" id="Sel_Project">
+            <option value=""></option>
+            <option value="" disabled selected>Projet</option>
+            <option ng-repeat="item in btProjects" ng-value="item.name">{{item.name}}</option>
+            </select>
+            <select class="form-control input-sm" ng-change="refreshFilters()" ng-model="page.typeFilter" name="Sel_Type" id="Sel_Type">
+            <option value=""></option>
+            <option value="" disabled selected>Type</option>
+            <option ng-repeat="item in btTypes" ng-value="item.name">{{item.name}}</option>
+            </select>
+            <select class="form-control input-sm" ng-change="refreshFilters()" ng-model="page.severityFilter" name="Sel_Severity" id="Sel_Severity">
+            <option value=""></option>
+            <option value="" disabled selected>Gravité</option>
+            <option ng-repeat="item in btSeverity" ng-value="item.name">{{item.name}}</option>
+            </select>
+            <select class="form-control input-sm" ng-change="refreshFilters()" ng-model="page.statusFilter" name="Sel_Status" id="Sel_Status">
+            <option value=""></option>
+            <option value="" disabled selected>État</option>
+            <option ng-repeat="item in btStates" ng-value="item.name">{{item.name}}</option>
+            </select>
+            <button class="btn btn-primary btn-sm" ng-click="resetFilters();"><span class="glyphicon glyphicon-remove"></span> Remise à zéro</button>
+            </form>
+        </div>
+        <div class="col-xs-3 pull-right">
+            <paging class="input-sm pull-right" page="pagerPageNumber" page-size="page.pageSize" total="page.totalElements" text-next-class="glyphicon glyphicon-chevron-right" text-prev-class="glyphicon glyphicon-chevron-left" show-prev-next="true" paging-action="pagerClicked(page, pageSize, total)"></paging>
+        </div>
+    </div>
+
+</div>

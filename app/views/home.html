@@ -1,0 +1,42 @@
+<div class="container" style="margin-top: 12px;" style="margin: 0 auto;">
+
+  <div class="row">
+    <div class=" col-sm-offset-1 col-sm-10">
+      <div class="jumbotron text-center well">
+        <h1>BugTracker v2</h1>
+        <p class="lead">Le meilleur outil pour un suivi efficace de vos bogues!</p>
+        <div ng-if="!isLoggedIn()">
+          <button class="btn btn-primary" ng-click="loginClick()"><span class="glyphicon glyphicon-user"></span> Ouvrir une session</button>
+          <button class="btn btn-default" ng-click="registerClick()"><span class="fa fa-group"></span> Créer un compte</button>
+        </div>
+        <div ng-if="isLoggedIn()">
+          <button class="btn btn-success" ng-click="mainClick()"><span class="glyphicon glyphicon-user"></span> Votre session est active, aller à la page principale</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-offset-3 col-sm-6">
+      <h4>Difference entre la version 1 et 2:</h4>
+      <p class="text-left">Reprogrammation complète du projet pour l'utilisation de versions antérieurs des divers composantes, soit:</p>
+      <ul>
+        <li class="text-left"><em>Mongoose</em>: v4.4</li>
+        <li class="text-left"><em>Express</em>: v4.12</li>
+        <li class="text-left"><em>Angular</em>: v1.14.4</li>
+        <li class="text-left"><em>NodeJS</em>: v4.2.0</li>
+      </ul>
+      <p class="text-left">Autres changements:</p>
+      <ul>
+        <li>Utilisation exclusive de Javascript; aucun Typescript.</li>
+        <li>Encryption des mots de passe dans la base de donnée a l'aide de <em>bcrypt</em>.</li>
+        <li>Verification d'identitée de l'usager grace a <em>JsonWebToken</em>.</li>
+      </ul>
+      <p class="text-left">La source de ce projet se retrouve sur Github: 
+        <a href="https://github.com/efortier/bugtrackerv2">https://github.com/efortier/bugtrackerv2</a>.</p>
+      <p class="text-left">Vous pouvez me joindre à l'adresse courriel
+        <B>eric.c.fortier@gmail.com</B>.</p>
+    </div>
+  </div>
+
+</div>

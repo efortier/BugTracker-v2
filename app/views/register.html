@@ -1,0 +1,40 @@
+
+<div style="margin: 0 auto; width:400px;">
+    <h2 class="page-header">Créer un compte</h2>
+    <ng-form class='form-horizontal'>
+        
+        <!-- decoys for auto-fill -->
+        <input style="display: none;" type="text" name="username">
+        <input style="display: none;" type="password" name="password">
+        <input style="display: none;" type="password" name="password2">
+
+        <div class="form-group input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input type="text" ng-model="realname" id="bt-reg-realname" name="bt-reg-realname" class="form-control" 
+            placeholder="Prénom et nom" ng-auto-focus>
+        </div>
+        <div class="form-group input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+            <input type="email" ng-model="email" id="bt-reg-email" name="bt-reg-email" class="form-control" placeholder="Courriel">
+        </div>
+        <div class="form-group input-group">
+            <span class="input-group-addon"><i class="fa fa-group"></i></span>
+            <input type="text" ng-model="username" ng-disabled = "formdisabled" id="bt-reg-username" name="bt-reg-username" class="form-control" placeholder="Nom d'utilisateur" disabled>
+        </div>
+        <div class="form-group input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+            <input type="password" ng-model="password" ng-disabled = "formdisabled" id="bt-reg-password" name="bt-reg-password" class="form-control" placeholder="Mot de passe" ng-value="" disabled >
+        </div>
+        <div class="form-group input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+            <input type="password" ng-model="password2" ng-disabled = "formdisabled" id="bt-reg-password2" name="bt-reg-assword2" class="form-control" placeholder="Vérifier mot de passe" ng-value="">
+        </div>
+        <div class="form-group pull-right">
+            <button class="btn btn-primary" ng-disabled = "formdisabled" ng-click="createClick()"><span class="glyphicon glyphicon-cloud-upload"></span> Créer le compte</button>
+            <button class="btn btn-default" ng-disabled = "formdisabled" ng-click="cancelClick()"><span class="glyphicon glyphicon-arrow-left"></span> Annuler</button>
+        </div>
+    </ng-form>
+</div>
+
+<modal-dialog></modal-dialog>
+

@@ -1,0 +1,21 @@
+<!-- modal dialog -->
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog modal-sm .fade">
+  
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-body">
+        <BR>
+        <p>{{modalContent}}</p>
+      </div>
+      <div class="modal-footer">
+
+  <button type="button" class="btn" 
+          data-ng-click="modalOptions.close()">{{modalClose}}</button>
+  <button type="button" class="btn btn-primary" 
+          data-ng-click="modalOptions.ok();">{{modalAction}}</button>
+      </div>
+    </div>
+    
+  </div>
+</div>

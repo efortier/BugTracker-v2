@@ -1,0 +1,35 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" style="font-size: x-large;" ng-click="$location.path('/home')" href="/">BugTracker</a>
+            <ul class="nav navbar-nav navbar-left">
+                <li ng-if="isLoggedIn()" ng-class="{'active':isActive('/issues')}">
+                    <a class="nav-link" href="/issues">Rapports <span class="badge">{{bugsCount}}</span></a>
+                </li>
+                <li ng-if="isLoggedIn()" ng-class="{'active':isActive('/newissue')}">
+                    <a class="nav-link" href="/newissue">Créer un rapport</a>
+                </li>
+                <li ng-if="isLoggedIn() && isActive('/viewissue')" class="active">
+                    <a class="nav-link" href="#">Voir rapport</a>
+                </li>
+                <li ng-if="isLoggedIn() && isActive('/newconfirm')" class="active">
+                    <a class="nav-link" href="#">Création</a>
+                </li>
+                <li ng-if="isLoggedIn() && isActive('/updateconfirm')" class="active">
+                    <a class="nav-link" href="#">Mise à jour</a>
+                </li>
+            </ul>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li ng-if="!isLoggedIn()" ng-class="{'active':isActive('/login')}">
+                <a class="nav-link" href="/login">Ouvrir une session</a>
+            </li>
+            <li ng-if="isLoggedIn()">
+                <a class="nav-link" ng-click="onLogoutClick()" href="#">Fermer la session</a>
+            </li>
+            <li ng-if="!isLoggedIn()" ng-class="{'active':isActive('/register')}">
+                <a class="nav-link" href="/register">Créer un compte</a>
+            </li>
+        </ul>
+    </div>
+</nav>

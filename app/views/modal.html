@@ -1,0 +1,38 @@
+<!-- modal dialog -->
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog modal-sm .fade">
+  
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-body">
+        <BR>
+        <p>{{modalContent}}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">{{modalClose}}</button>
+      </div>
+    </div>
+    
+  </div>
+</div>
+  
+<!-- <script>
+function showModalWithFocus(focus){
+    if(focus) {
+      $('#myModal').on('hidden.bs.modal', function () {
+        $('#'+focus).focus();
+      });
+    };
+    $('#myModal').modal({keyboard: true})
+};
+function showModalWithRedirect(redirect){
+    if(redirect) {
+      $('#myModal').on('hidden.bs.modal', function () {
+        {{redirectTo(redirect);}
+       //$location.path(redirect);
+        }
+      });
+    };
+    $('#myModal').modal({keyboard: true})
+};
+</script> -->

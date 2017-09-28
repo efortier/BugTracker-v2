@@ -1,0 +1,72 @@
+<div class="container">
+
+      <div class="row">
+    
+        <div class="col-sm-offset-1 col-sm-3">
+          <div class="form-group">
+            <label for="Sel_Projects">Projet du rapport:</label>
+            <select class="form-control" ng-model="btReport.project" ng-change="validateForm()" name="Projects" id="Sel_Projects">
+              <option value="" disabled selected>Choisir un projet</option>
+              <option ng-repeat="item in btProjects" ng-value="item.name">{{item.name}}</option>
+            </select>
+          </div>
+        </div>
+    
+        <div class="col-sm-3">
+          <div class="form-group">
+            <label for="Sel_Types">Type du rapport:</label>
+            <select class="form-control" ng-model="btReport.type" ng-change="validateForm()" name="Types" id="Sel_Types">
+              <option value="" disabled selected>Choisir un type</option>
+              <option ng-repeat="item in btTypes" ng-value="item.name">{{item.name}}</option>
+            </select>
+          </div>
+        </div>
+    
+        <div class="col-sm-3">
+          <div class="form-group">
+            <label for="Sel_Severity">Gravité du problème:</label>
+            <select class="form-control" ng-model="btReport.severity" ng-change="validateForm()" name="Severity" id="Sel_Severity">
+              <option value="" disabled selected>Choisir la gravité</option>
+              <option ng-repeat="item in btSeverity" ng-value="item.name">{{item.name}}</option>
+            </select>
+          </div>
+        </div>
+    
+      </div>
+    
+      <div class="row">
+        <div class="col-sm-offset-1 col-sm-6">
+          <div class="form-group">
+            <label for="rep_title">Titre du rapport:</label>
+            <input type="text" class="form-control" id="rep_title" ng-model="btReport.title" ng-change="validateForm()" placeholder="Enter report title">
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="form-group">
+            <label for="rep_tags">Mots clés:</label>
+            <input type="text" class="form-control" id="rep_tags" ng-model="btReport.tags" ng-change="validateForm()" placeholder="Separer les mots clés par une virgule">
+          </div>
+        </div>
+      </div>
+    
+      <div class="row">
+        <div class="col-sm-offset-1 col-sm-9">
+          <div class="form-group">
+            <label for="rep_desc">Description du problème: (inclure les étapes pour reproduire le problème, résultats actuels vs anticipés, etc)</label>
+            <textarea class="form-control" rows="8" id="rep_desc" ng-model="btReport.description" ng-change="validateForm()" placeholder="Description"></textarea>
+          </div>
+          <section class="pull-right">
+            
+
+            <button class="btn btn-primary" ng-disabled="!btReport.isValid" ng-click="submitForm()"><span class="glyphicon glyphicon-cloud-upload"></span> Sauvegarder le rapport</button>
+
+            <button class="btn btn-default" ng-click="cancelForm()"><span class="glyphicon glyphicon-arrow-left"></span> Annuler</button>
+
+
+          </section>
+        </div>
+      </div>
+    
+    </div>
+
+<modal-dialog></modal-dialog>
