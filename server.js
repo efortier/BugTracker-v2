@@ -67,19 +67,19 @@ app.use('/users', require('./routes.users'));
 app.use('/issues', require('./routes.issues'));
 
 // //GET index.html route
-// app.use("/*", function(req, res) {
-//   return res.render("index.html");
-// });
+app.use("/*", function(req, res) {
+  return res.render(path.join(__dirname, 'public/index.html'));
+});
 
 // catch all.
 
-app.get('/', (req, res) => {
-  res.send('Invalid Endpoint');
-});
+// app.get('/', (req, res) => {
+//   res.send('Invalid Endpoint');
+// });
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/index.html'));
-});
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'public/index.html'));
+// });
 
 // app.get('*', (req,res)=>{
 //   res.sendFile(path.join(__dirname, 'public/index.html'));
