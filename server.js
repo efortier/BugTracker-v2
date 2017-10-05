@@ -68,7 +68,7 @@ app.use('/users', require('./routes.users'));
 app.use('/issues', require('./routes.issues'));
 
 // index.html route
-app.all("*", function(req, res) {
+app.get("*", function(req, res) {
 //	console.log('*** REDIRECT: url: ' + req.url)
 //	console.log('*** REDIRECT: baseurl: ' + req.baseUrl)
 //	console.log('*** REDIRECT: originalurl: ' + req.originalUrl)

@@ -25,17 +25,17 @@ app.controller("NewissueController", function($scope, AuthService, $rootScope,
 		$scope.loadSettings();
 
 		// @todo: this should be completely removed on prod!
-  //   	if (BTCONFIGS.isDev)
-  //   	{
-  //   		$scope.btReport.project = 'BugTracker';
-  //   		$scope.btReport.type = 'Interface';
-  //   		$scope.btReport.severity = 'Fatale';
-  //   		$scope.btReport.title = chance.profession({rank: true});
-  //   		$scope.btReport.description = chance.paragraph({sentences: 3});
-  //   		$scope.btReport.tags = chance.word();
-  //   		$scope.btReport.status = 'Nouveau';
-  //   		$scope.validateForm();
-		// } else console.assert('debug elements in production! REMOVE THESE!');
+    	if (BTCONFIGS.isDev)
+    	{
+    		//$scope.btReport.project = 'BugTracker';
+    		//$scope.btReport.type = 'Interface';
+    		//$scope.btReport.severity = 'Fatale';
+    		//$scope.btReport.title = chance.profession({rank: true});
+    		//$scope.btReport.description = chance.paragraph({sentences: 3});
+    		//$scope.btReport.tags = chance.word();
+    		$scope.btReport.status = 'Nouveau';
+    		$scope.validateForm();
+		} else console.assert('debug elements in production! REMOVE THESE!');
 
 
     });
