@@ -8,12 +8,7 @@ app.controller("LoginController", function($scope, AuthService, $location, Strin
 
     
     $scope.$on('$viewContentLoaded', function() { 
-		// @todo: this should be completely removed on prod!
-    	if (BTCONFIGS.isDev)
-    	{
-			$scope.username = 'efortier';
-			$scope.password = 'people';
-		} else console.assert('debug elements in production! REMOVE THESE!');
+
     });
 
 	$scope.cancelClick = function() {

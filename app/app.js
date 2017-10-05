@@ -79,7 +79,7 @@ app.controller("AppController", function($scope, $route, $location, AuthService)
                 }
             }
         });
-    };
+    }
 
 });
 
@@ -92,7 +92,7 @@ app.run(['$rootScope', '$location', 'AuthService', function ($rootScope, $locati
             $location.path("/login");
         }
   });
-}])
+}]);
 
 app.directive("navBar", function() {
     return {
@@ -113,6 +113,6 @@ app.directive('modalDialog',function(){
 app.constant("BTCONFIGS", {
     backendHost: "http://localhost:3000/",
     backendHost2: "",
-    isDev: true,
+    isDev: false,
     noLogging: false
 });
